@@ -1,12 +1,6 @@
 import time
 import sys
-
-def sequential_print(text, delay=0.1):
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()  
-        time.sleep(delay)  
-    print()  
+from Sequential_Print import sequential_print
 
 
 print("This is a bit calculator, it can be used to know how many numbers (from 0) can be represented with a given number of bits\n")
@@ -25,14 +19,6 @@ while True:
     except ValueError:
         print ("Numbers and letters are not allowed, please enter a positive number")
         continue
-
-def sequential_print(text, delay=0.1):
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()  
-        time.sleep(delay)  
-    print()  
-
 
 text = "Hello world, this is a new project!"
 sequential_print(text, delay=0.3)
