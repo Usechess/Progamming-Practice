@@ -1,8 +1,8 @@
 // Pong.c - simple console Pong for Windows (uses conio.h, windows.h)
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
-#include <windows.h>
+#include <conio.h> // investigate why this has an error
+#include <windows.h> // investigate why this has an error
 #include <time.h>
 
 #define WIDTH 80
