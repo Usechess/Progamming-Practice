@@ -1,0 +1,27 @@
+Name: Pong
+Description:
+Pong is a game based in two sides, each side controlled by a player (later add some option for just 1 player to be necessary to play)
+And each player controles a pad, this pad can be moved by the player up and down
+A ball starts in the middle in a random direction and the goal is to make the ball to touch the other side.
+This will add 1 point to the player on the other side that the ball just touched, e.g:
+If you are controlling the pad on the left and touch the ball sending it to the right side and it touches the right border this will add 1 point to the left side.
+The goal is to have more points than your opponent
+
+
+Technical Aspects of the Game
+My initial vision:
+I am trying to make pong from scratch in C, and I really want to learn from 0, I am new to this and don't know much about coding in general.
+
+Layout:
+I have 4 "walls" or borders, I have upper, bottom, left and right, and this is like the ("layout?"), then I have the Lpad or pad1 and the Rpad or pad2, and also I have the ball
+
+
+So, imagine that my borders are in 5 lines, and it has a 30 spaces of length, so the ball is set in the 3rd line on the 15th space, now (the ball being half of a line of tall) I could set that space as the coordinates (0;0) and create a coordinate system from that
+
+This said I could define the movement based on this system of coordinates, the pads (being 2 lines height, and 1 line of length) could only move in the Y coordinates and not in the X coordinates, meaning that they would move only between the 5 lines), this could work as a each time the user press a certain key from the keyboard the pad rewrites on the upper or down line according to the key pressed being up or down (this means that if the keys for movement are W for up and S, each time that the user presses W the pad assigned to that key should rewrite on the upper line).
+
+The point system should be two ceros, (each cero representing each player, one cero for the Lplayer and 0 cero for Rplayer) and it will give a count for who is winning.
+
+With the previous explained coordinates system we could use angles to move the ball at the start, making that the ball don't just go in a straight line.
+Now I could set some ground rules for the ball, like the ball should bounce on the upper and bottom borders
+When the ball hit L or R borders it should add 1 point to the "pad"(player) on the other side that (meaning that if the ball hits the L border it adds 1 point to the "Rpad" or "Rplayer")
